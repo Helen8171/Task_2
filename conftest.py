@@ -1,12 +1,7 @@
 import pytest
 import requests
-import random
-import string
-
-BASE_URL = "https://stellarburgers.education-services.ru/api"
-
-def generate_random_string(length=10):
-    return ''.join(random.choices(string.ascii_lowercase, k=length))
+from data import BASE_URL
+from helpers import generate_random_string
 
 @pytest.fixture
 def user_data():

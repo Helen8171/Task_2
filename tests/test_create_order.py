@@ -1,5 +1,5 @@
 import requests
-from conftest import BASE_URL
+from data import BASE_URL, EMPTY_INGREDIENTS_MESSAGE
 
 class TestCreateOrder:
     def test_create_order_with_auth_and_ingredients(self, created_user, valid_ingredient):
@@ -20,6 +20,7 @@ class TestCreateOrder:
         payload = {"ingredients": []}
         response = requests.post(f"{BASE_URL}/orders", json=payload, headers=headers)
         assert response.status_code == 400
+        assert response.json()["message"] == EMPTY_INGREDIENTS_MESSAGE
 
     def test_create_order_invalid_hash(self, created_user):
         _, access_token = created_user

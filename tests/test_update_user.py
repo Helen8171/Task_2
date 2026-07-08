@@ -1,5 +1,6 @@
 import requests
-from conftest import BASE_URL, generate_random_string
+from data import BASE_URL
+from helpers import generate_random_string
 
 class TestUpdateUser:
     def test_update_user_with_auth(self, created_user):

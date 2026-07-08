@@ -1,5 +1,5 @@
 import requests
-from conftest import BASE_URL
+from data import BASE_URL
 
 class TestLoginUser:
     def test_login_existing_user(self, created_user):

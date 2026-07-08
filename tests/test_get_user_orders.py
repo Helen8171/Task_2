@@ -1,5 +1,5 @@
 import requests
-from conftest import BASE_URL
+from data import BASE_URL
 
 class TestGetUserOrders:
     def test_get_user_orders_with_auth(self, created_user, valid_ingredient):

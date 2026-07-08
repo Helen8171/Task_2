@@ -1,6 +1,6 @@
 import requests
 import pytest
-from conftest import BASE_URL
+from data import BASE_URL
 
 class TestCreateUser:
     def test_create_unique_user(self, user_data):
